@@ -1,0 +1,110 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "001",
+        "author": "Szymon Jakubaszek",
+        "changes": [
+          {
+            "createTable": {
+              "schemaName": "public",
+              "tableName": "medical_appointments",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "type": "UUID",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": true
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "doctor_email",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "doctor_firstname",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "doctor_lastname",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "patient_email",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "patient_firstname",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "patient_lastname",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "ailments",
+                    "type": "oid",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "recommendations",
+                    "type": "oid",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

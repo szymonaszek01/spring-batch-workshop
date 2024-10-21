@@ -26,7 +26,7 @@ public class MedicalAppointment extends BaseEntity {
 
     @ManyToMany
     @JoinTable(
-            name = "users",
+            name = "medical_appointments_users",
             joinColumns = @JoinColumn(name = "medical_appointment_id"),
             inverseJoinColumns = @JoinColumn(name = "user_id"))
     private Set<User> users;

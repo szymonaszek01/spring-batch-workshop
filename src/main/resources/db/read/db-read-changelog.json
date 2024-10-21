@@ -1,0 +1,9 @@
+{
+  "databaseChangeLog": [
+    {
+      "include": {
+        "file": "db/read/changelogs/001-initialize-db-read.json"
+      }
+    }
+  ]
+}
