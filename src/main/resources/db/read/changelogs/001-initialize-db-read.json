@@ -83,7 +83,7 @@
                 {
                   "column": {
                     "name": "ailments",
-                    "type": "oid",
+                    "type": "text",
                     "constraints": {
                       "nullable": false,
                       "primaryKey": false
@@ -93,7 +93,7 @@
                 {
                   "column": {
                     "name": "recommendations",
-                    "type": "oid",
+                    "type": "text",
                     "constraints": {
                       "nullable": false,
                       "primaryKey": false

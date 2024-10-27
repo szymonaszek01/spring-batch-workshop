@@ -1,0 +1,21 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "002",
+        "author": "Szymon Jakubaszek",
+        "changes": [
+          {
+            "sqlFile": {
+              "dbms": "postgresql",
+              "endDelimiter": ";",
+              "splitStatements": true,
+              "path": "db/read/sql/002-fill-db-read-with-example-values.sql",
+              "stripComments": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
