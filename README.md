@@ -37,3 +37,14 @@ Entities (db-write):
 * BaseEntity.java
 * User.java extends BaseEntity.java
 * MedicalAppointment.java extends BaseEntity.java
+
+### 4) Package "repository"
+Repositories (db-read):
+* ReadOnlyRepository.java - custom interface, which does not allow to save or update entities
+* MedicalAppointmentRepository.java extends ReadOnlyRepository.java
+
+Repositories (db-write):
+* MedicalAppointmentRepository.java extends JpaRepository.java
+
+### 5) Package "util"
+Contains constants and static methods.

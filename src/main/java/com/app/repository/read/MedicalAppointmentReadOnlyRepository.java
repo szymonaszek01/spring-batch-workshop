@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface MedicalAppointmentRepository extends ReadOnlyRepository<MedicalAppointment, UUID> {
+public interface MedicalAppointmentReadOnlyRepository extends ReadOnlyRepository<MedicalAppointment, UUID> {
 }
