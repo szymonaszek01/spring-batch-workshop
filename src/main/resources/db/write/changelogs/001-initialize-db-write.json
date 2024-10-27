@@ -1,0 +1,150 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "001",
+        "author": "Szymon Jakubaszek",
+        "changes": [
+          {
+            "createTable": {
+              "schemaName": "public",
+              "tableName": "medical_appointments",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "type": "UUID",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": true
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "ailments",
+                    "type": "oid",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "recommendations",
+                    "type": "oid",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "createTable": {
+              "schemaName": "public",
+              "tableName": "users",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "type": "UUID",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": true
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "email",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "password",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "firstname",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "lastname",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "role",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "createTable": {
+              "schemaName": "public",
+              "tableName": "medical_appointments_users",
+              "columns": [
+                {
+                  "column": {
+                    "name": "medical_appointment_id",
+                    "type": "UUID",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": true,
+                      "foreignKeyName": "medical_appointments_fkey",
+                      "references": "medical_appointments(id)"
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "user_id",
+                    "type": "UUID",
+                    "constraints": {
+                      "nullable": false,
+                      "primaryKey": true,
+                      "foreignKeyName": "users_fkey",
+                      "references": "users(id)"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

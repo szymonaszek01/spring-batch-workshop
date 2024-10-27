@@ -1,0 +1,9 @@
+{
+  "databaseChangeLog": [
+    {
+      "include": {
+        "file": "db/write/changelogs/001-initialize-db-write.json"
+      }
+    }
+  ]
+}
