@@ -12,5 +12,8 @@ spring:
             username: ${DB_READ_USERNAME}
             password: ${DB_READ_PASSWORD}
             driver-class-name: org.postgresql.Driver
+    batch:
+        jdbc:
+            initialize-schema: always
 server:
     port: 5432
